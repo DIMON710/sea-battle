@@ -2,13 +2,13 @@ const express = require('express');
 require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 5000;
-const ADDRESS = 'localhost';
 const CLIENT = 'https://dimension-sea-battle.onrender.com';
 // const CLIENT = 'http://localhost:5173';
+const ssl = require('ssl-express-www');
+app.use(ssl);
 
 
-
-const https = require('https').Server(app)
+const http = require('http').Server(app)
 const cors = require('cors')
 const socketIO = require('socket.io')(http, {
     cors: {
@@ -235,6 +235,6 @@ socketIO.on('connection', (socket) => {
         }
     });
 });
-https.listen(PORT, () => {
-    console.log(`Server working on port ${'https://'+ADDRESS+':'+PORT}`)
+http.listen(PORT, () => {
+    console.log(`Server working on port ${PORT}`)
 })

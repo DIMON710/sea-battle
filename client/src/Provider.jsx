@@ -2,8 +2,8 @@ import React, {useEffect, useState} from 'react';
 import {Context} from "./Context/Context.jsx";
 import App from "./App.jsx";
 import socketIO from "socket.io-client"
-const socket = socketIO.connect('https://dimension-server-for-sea-battle.onrender.com')
-// const socket = socketIO.connect('http://localhost:5000')
+// const socket = socketIO.connect('https://dimension-server-for-sea-battle.onrender.com')
+const socket = socketIO.connect('http://localhost:5000')
 const Provider = () => {
     const [myField1, setMyField1] = useState([]);
     const [fieldAttac1, setFieldAttac1] = useState([]);
