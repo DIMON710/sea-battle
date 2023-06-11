@@ -1,13 +1,14 @@
-const express = require('express')
-const app = express()
-const PORT = 5000
-const ADDRESS = 'localhost'
-// const CLIENT = 'https://dimension-react.000webhostapp.com'
-const CLIENT = 'http://localhost:5173'
+const express = require('express');
+require('dotenv').config();
+const app = express();
+const PORT = process.env.PORT || 5000;
+const ADDRESS = 'localhost';
+const CLIENT = 'https://dimension-sea-battle.onrender.com';
+// const CLIENT = 'http://localhost:5173';
 
 
 
-const http = require('http').Server(app)
+const https = require('https').Server(app)
 const cors = require('cors')
 const socketIO = require('socket.io')(http, {
     cors: {
@@ -234,7 +235,6 @@ socketIO.on('connection', (socket) => {
         }
     });
 });
-http.listen(PORT, () => {
-    console.log(`Server working on port ${'http://'+ADDRESS+':'+PORT}`)
-    // res.send(`Server working on port ${'http://'+ADDRESS+':'+PORT}`)
+https.listen(PORT, () => {
+    console.log(`Server working on port ${'https://'+ADDRESS+':'+PORT}`)
 })
