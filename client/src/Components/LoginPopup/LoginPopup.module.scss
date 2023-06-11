@@ -1,0 +1,59 @@
+.Name {
+  z-index: 1;
+  position: absolute;
+  top: 7%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1a1a1a;
+  width: 100%;
+  max-width: 400px;
+  height: 300px;
+  border-radius: 20px;
+  padding: 25px;
+  input {
+    padding-left: 10px;
+    width: 100%;
+    max-width: 250px;
+    height: 40px;
+
+    font-size: 16px;
+  }
+  @media (prefers-color-scheme: light) {
+    background-color: #d9d9d9;
+  }
+  .LoginBtn {
+    display: flex;
+    align-items: center;
+    background-color: #242424;
+    margin: 5% auto 0;
+    height: 40px;
+    @media (prefers-color-scheme: light) {
+      background-color: #9b9a9a;
+      color: var(--color-white);
+    }
+  }
+}
+.Switch {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin: 5% 0;
+  button {
+    background-color: #242424;
+    @media (prefers-color-scheme: light) {
+      background-color: #9b9a9a;
+      color: var(--color-white);
+    }
+  }
+}
+.Win {
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  button {
+    width: 100%;
+    max-width: 200px;
+  }
+}

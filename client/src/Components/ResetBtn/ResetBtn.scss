@@ -1,0 +1,14 @@
+.resetBtn {
+  border: 1px solid #ccc;
+  width: 50%;
+  height: 25%;
+  margin: 0 auto;
+  transition: color 0.25s;
+  @media (prefers-color-scheme: light) {
+    background-color: #9b9a9a;
+    color: var(--color-white);
+  }
+  &:hover {
+    color: #646cff;
+  }
+}

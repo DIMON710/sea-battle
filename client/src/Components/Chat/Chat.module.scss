@@ -1,0 +1,113 @@
+.Chat {
+  position: fixed;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 90%;
+  background-color: #2d3034;
+  border-radius: 8px;
+  max-width: 1000px;
+  @media (prefers-color-scheme: light) {
+    background-color: #efefef;
+    color: #04264d;
+  }
+}
+.Block {
+  margin: 0 auto;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 10px 10px;
+  overflow: auto;
+  gap: 5px;
+  h4 {
+    position: absolute;
+    top: -25px;
+  }
+}
+.Right {
+  position: relative;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background-color: #242424;
+  min-width: 40%;
+  padding: 5px 10px 5px;
+  border-radius: 8px;
+  text-align: end;
+  @media (prefers-color-scheme: light) {
+      background-color: #acafbb;
+  }
+}
+.Left {
+  position: relative;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #414040;
+  min-width: 40%;
+  padding: 5px 10px 5px;
+  border-radius: 8px;
+  text-align: start;
+  @media (prefers-color-scheme: light) {
+      background-color: #bec7c7;
+  }
+}
+.Writing {
+  background-color: #111;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px;
+  border-radius: 8px;
+  @media (prefers-color-scheme: light) {
+    background-color: #b6b6b6;
+  }
+  input {
+    border-radius: 8px;
+    padding-left: 5px;
+    width: 90%;
+    height: 40px;
+    font-size: 16px;
+    border: 0;
+  }
+  button {
+    width: 10%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      color: #fff;
+      @media (prefers-color-scheme: light) {
+        color: #000;
+      }
+    }
+  }
+}
+.Close {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #111;
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  margin: auto auto;
+  user-select: none;
+  border: 1px solid transparent;
+  transition: border-color 0.25s;
+  z-index: 1;
+  &:hover {
+    border-color: #646cff;
+  }
+
+  @media (prefers-color-scheme: light) {
+    background-color: #b6b6b6;
+  }
+}

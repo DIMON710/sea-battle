@@ -1,0 +1,35 @@
+.field {
+  background-color: white;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  border: 2px solid #8e9be8;
+  @media (prefers-color-scheme: light) {
+    border: 2px solid #8e9be8;
+  }
+  @media (max-height: 710px) {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+td {
+  background-color: black;
+  user-select: none;
+  box-sizing: content-box;
+}
+
+p {
+  margin: auto;
+  line-height: 1;
+  width: 27.8px;
+  height: 27.8px;
+  font-size: 20px;
+  @media (max-height: 710px) {
+    width: 20px;
+    height: 22px;
+  }
+}
+.ship {
+  background-color: #999;
+}
