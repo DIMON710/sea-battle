@@ -73,9 +73,9 @@ const ChatCom = () => {
                         />
                         <button type="submit">
                             {window.matchMedia('(prefers-color-scheme: dark)').matches ? (
-                                <img src="../../../public/assets/sendWhite.svg" alt="=>"/>
+                                <img src="/assets/sendWhite.svg" alt="=>"/>
                             ) : (
-                                <img src="../../../public/assets/sendBlack.svg" alt="=>"/>
+                                <img src="/assets/sendBlack.svg" alt="=>"/>
                             )}
                         </button>
                     </form>
